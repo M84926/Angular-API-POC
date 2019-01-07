@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularPOC.API", "TiffinService\AngularPOC.API.csproj", "{9AD19251-C58A-4CE8-AEE7-6452943BC8B7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularPOC.Entities", "TiffinService.Entities\AngularPOC.Entities.csproj", "{E20A9B78-7A86-4924-8D18-4CA5662C4923}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularPOC.Data", "TiffinService.Data\AngularPOC.Data.csproj", "{EF331A17-D693-45AF-9C3E-CA8CBC91D2C1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularPOC.Service", "TiffinService.Service\AngularPOC.Service.csproj", "{466BC1E3-8CD0-4422-89E3-DC2124E1293C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularPOC.Common", "TiffinService.Common\AngularPOC.Common.csproj", "{6AC5BFF1-A07A-4749-BC87-B5758DBBF5B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AD19251-C58A-4CE8-AEE7-6452943BC8B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AD19251-C58A-4CE8-AEE7-6452943BC8B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AD19251-C58A-4CE8-AEE7-6452943BC8B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AD19251-C58A-4CE8-AEE7-6452943BC8B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E20A9B78-7A86-4924-8D18-4CA5662C4923}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E20A9B78-7A86-4924-8D18-4CA5662C4923}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E20A9B78-7A86-4924-8D18-4CA5662C4923}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E20A9B78-7A86-4924-8D18-4CA5662C4923}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF331A17-D693-45AF-9C3E-CA8CBC91D2C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF331A17-D693-45AF-9C3E-CA8CBC91D2C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF331A17-D693-45AF-9C3E-CA8CBC91D2C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF331A17-D693-45AF-9C3E-CA8CBC91D2C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{466BC1E3-8CD0-4422-89E3-DC2124E1293C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{466BC1E3-8CD0-4422-89E3-DC2124E1293C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{466BC1E3-8CD0-4422-89E3-DC2124E1293C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{466BC1E3-8CD0-4422-89E3-DC2124E1293C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AC5BFF1-A07A-4749-BC87-B5758DBBF5B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AC5BFF1-A07A-4749-BC87-B5758DBBF5B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AC5BFF1-A07A-4749-BC87-B5758DBBF5B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AC5BFF1-A07A-4749-BC87-B5758DBBF5B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4A72931E-E925-4EDC-AE17-1302BFF82FB8}
+	EndGlobalSection
+EndGlobal
