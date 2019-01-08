@@ -62,7 +62,7 @@ namespace AngularPOC.Controllers
         [Route("[action]")]
         public ApiResponse<UserMaster> GetAllUsers()
         {
-            return _service.GetAllUsers();
+            return _service.GetAllUsersWithCities();
 
         }
     }

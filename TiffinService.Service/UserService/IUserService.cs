@@ -9,5 +9,7 @@ namespace AngularPOC.Service.UserService
         ApiResponse<UserMaster> AuthenticateUser(string email, string password);
 
         ApiResponse<UserMaster> GetAllUsers();
+
+        ApiResponse<UserMaster> GetAllUsersWithCities();
     }
 }

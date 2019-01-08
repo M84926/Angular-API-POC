@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using AngularPOC.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace AngularPOC.Data.Repositories.User
 {
@@ -19,5 +22,11 @@ namespace AngularPOC.Data.Repositories.User
 
             return user;
         }
+
+        public IEnumerable<UserMaster> GetAllUsersWithCities()
+        {
+            return Entities.Include(i => i.City);
+        }
+
     }
 }

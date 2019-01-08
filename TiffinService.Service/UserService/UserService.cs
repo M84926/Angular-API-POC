@@ -59,5 +59,22 @@ namespace AngularPOC.Service.UserService
             return response;
         }
 
+        public ApiResponse<UserMaster> GetAllUsersWithCities()
+        {
+            var response = new ApiResponse<UserMaster>();
+
+            try
+            {
+                response.Data = _repository.GetAllUsersWithCities().Take(1000).ToList();
+                response.IsSuccess = true;
+            }
+            catch (Exception ex)
+            {
+                response.Messages.Add(ex.Message);
+            }
+
+            return response;
+        }
+
     }
 }
