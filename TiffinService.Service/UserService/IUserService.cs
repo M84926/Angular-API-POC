@@ -1,5 +1,6 @@
 ﻿using AngularPOC.Common;
 using AngularPOC.Entities;
+using AngularPOC.Entities.Dto;
 using AngularPOC.Service.EntityService;
 
 namespace AngularPOC.Service.UserService
@@ -11,5 +12,7 @@ namespace AngularPOC.Service.UserService
         ApiResponse<UserMaster> GetAllUsers();
 
         ApiResponse<UserMaster> GetAllUsersWithCities();
+
+        ApiResponse<UsersWithPaging> GetAllUsersWithCitiesWithPaging(int skip, int take);
     }
 }

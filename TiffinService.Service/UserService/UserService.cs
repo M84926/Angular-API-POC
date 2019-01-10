@@ -4,6 +4,7 @@ using AngularPOC.Common;
 using AngularPOC.Data.Repositories;
 using AngularPOC.Data.Repositories.User;
 using AngularPOC.Entities;
+using AngularPOC.Entities.Dto;
 using AngularPOC.Service.EntityService;
 
 namespace AngularPOC.Service.UserService
@@ -66,6 +67,24 @@ namespace AngularPOC.Service.UserService
             try
             {
                 response.Data = _repository.GetAllUsersWithCities().Take(1000).ToList();
+                response.IsSuccess = true;
+            }
+            catch (Exception ex)
+            {
+                response.Messages.Add(ex.Message);
+            }
+
+            return response;
+        }
+
+        public ApiResponse<UsersWithPaging> GetAllUsersWithCitiesWithPaging(int skip, int take)
+        {
+            var response = new ApiResponse<UsersWithPaging>();
+
+            try
+            {
+                var usersWithCount = _repository.GetAllUsersWithCitiesWithPaging(skip, take);
+                response.Data.Add(usersWithCount);
                 response.IsSuccess = true;
             }
             catch (Exception ex)

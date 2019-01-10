@@ -1,4 +1,5 @@
 ﻿using AngularPOC.Entities;
+using AngularPOC.Entities.Dto;
 using System.Collections.Generic;
 
 namespace AngularPOC.Data.Repositories.User
@@ -8,5 +9,7 @@ namespace AngularPOC.Data.Repositories.User
         UserMaster AuthenticateUser(string email,string password);
 
         IEnumerable<UserMaster> GetAllUsersWithCities();
+
+        UsersWithPaging GetAllUsersWithCitiesWithPaging(int skip, int take);
     }
 }

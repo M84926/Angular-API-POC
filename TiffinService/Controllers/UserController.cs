@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using AngularPOC.Common;
 using AngularPOC.Entities;
 using AngularPOC.Service.UserService;
+using AngularPOC.Entities.Dto;
 
 namespace AngularPOC.Controllers
 {
@@ -60,9 +61,9 @@ namespace AngularPOC.Controllers
         }
 
         [Route("[action]")]
-        public ApiResponse<UserMaster> GetAllUsers()
+        public ApiResponse<UsersWithPaging> GetAllUsers(int skip = 0, int take = int.MaxValue)
         {
-            return _service.GetAllUsersWithCities();
+            return _service.GetAllUsersWithCitiesWithPaging(skip, take);
 
         }
     }
