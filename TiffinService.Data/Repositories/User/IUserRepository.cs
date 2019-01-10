@@ -10,6 +10,6 @@ namespace AngularPOC.Data.Repositories.User
 
         IEnumerable<UserMaster> GetAllUsersWithCities();
 
-        UsersWithPaging GetAllUsersWithCitiesWithPaging(int skip, int take);
+        UsersWithPaging GetAllUsersWithCitiesWithPaging(int skip, int take, string orderBy);
     }
 }

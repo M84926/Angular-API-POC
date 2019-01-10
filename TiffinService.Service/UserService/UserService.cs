@@ -77,13 +77,13 @@ namespace AngularPOC.Service.UserService
             return response;
         }
 
-        public ApiResponse<UsersWithPaging> GetAllUsersWithCitiesWithPaging(int skip, int take)
+        public ApiResponse<UsersWithPaging> GetAllUsersWithCitiesWithPaging(int skip, int take, string orderBy)
         {
             var response = new ApiResponse<UsersWithPaging>();
 
             try
             {
-                var usersWithCount = _repository.GetAllUsersWithCitiesWithPaging(skip, take);
+                var usersWithCount = _repository.GetAllUsersWithCitiesWithPaging(skip, take, orderBy);
                 response.Data.Add(usersWithCount);
                 response.IsSuccess = true;
             }

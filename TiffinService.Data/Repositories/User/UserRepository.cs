@@ -2,9 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using AngularPOC.Common;
 using AngularPOC.Entities;
 using AngularPOC.Entities.Dto;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Dynamic;
 
 namespace AngularPOC.Data.Repositories.User
 {
@@ -29,9 +31,16 @@ namespace AngularPOC.Data.Repositories.User
             return Entities.Include(i => i.City);
         }
 
-        public UsersWithPaging GetAllUsersWithCitiesWithPaging(int skip,int take)
+        public UsersWithPaging GetAllUsersWithCitiesWithPaging(int skip, int take, string orderBy)
         {
-            var users = Entities.Include(i => i.City).Skip(skip).Take(take).ToList();
+            IQueryable<UserMaster> query = Entities.Include(i => i.City);
+
+            if (!string.IsNullOrEmpty(orderBy))
+                query= query.OrderBy(SortingHelper.GetSortableString(orderBy));
+
+            query = query.Skip(skip).Take(take);
+            
+            var users = query.ToList();
             var count = Entities.Count();
             return new UsersWithPaging(users, count);
         }

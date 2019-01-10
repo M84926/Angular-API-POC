@@ -13,6 +13,6 @@ namespace AngularPOC.Service.UserService
 
         ApiResponse<UserMaster> GetAllUsersWithCities();
 
-        ApiResponse<UsersWithPaging> GetAllUsersWithCitiesWithPaging(int skip, int take);
+        ApiResponse<UsersWithPaging> GetAllUsersWithCitiesWithPaging(int skip, int take, string orderBy);
     }
 }

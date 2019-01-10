@@ -61,9 +61,9 @@ namespace AngularPOC.Controllers
         }
 
         [Route("[action]")]
-        public ApiResponse<UsersWithPaging> GetAllUsers(int skip = 0, int take = int.MaxValue)
+        public ApiResponse<UsersWithPaging> GetAllUsers(int skip = 0, int take = int.MaxValue, string orderBy = "")
         {
-            return _service.GetAllUsersWithCitiesWithPaging(skip, take);
+            return _service.GetAllUsersWithCitiesWithPaging(skip, take, orderBy);
 
         }
     }
